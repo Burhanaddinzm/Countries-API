@@ -29,7 +29,9 @@ body {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-40px);
 }
 
 .inverted {
@@ -125,6 +127,10 @@ main .top-side .dropdown {
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.14);
 }
 
+main .top-side .dropdown .chevron {
+  transition: all 0.2s linear;
+}
+
 main .top-side .dropdown .dropdown-menu {
   position: absolute;
   background: #fff;
@@ -133,6 +139,8 @@ main .top-side .dropdown .dropdown-menu {
   border-radius: 8px;
   top: calc(100% + 5px);
   left: 0;
+  transition: all 0.2s linear;
+  z-index: 5;
 }
 
 main .top-side .dropdown .dropdown-menu ul {

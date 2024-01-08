@@ -68,6 +68,7 @@ const filterName = (name) => {
 const filterRegion = () => {
   dropdown.addEventListener("click", (e) => {
     dropdownMenu.classList.toggle("hidden");
+    chevron.classList.toggle("inverted");
 
     const clicked = e.target;
     const selectedRegion = clicked.dataset.region;
