@@ -1,136 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Country API</title>
     <!-- Style -->
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container">
-            <h1 class="logo">Where in the world?</h1>
-            <div class="mode-container">
-                <img src="./assets/icons/moon-regular.svg" alt="">
-                <p>Dark Mode</p>
-            </div>
+      <div class="container">
+        <a href="/">
+          <h1 class="logo">Where in the world?</h1>
+        </a>
+        <div class="mode-container">
+          <img src="./assets/icons/moon-regular.svg" alt="" />
+          <p>Dark Mode</p>
         </div>
+      </div>
     </header>
     <div class="container">
-        <main>
-            <input id="input" type="text" placeholder="Search for a country..">
-            <div class="card-container">
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2>USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img-container">
-                        <img src="./assets/images/usa-flag.jpg" alt="">
-                    </div>
-                    <div class="text-container">
-                        <div class="info">
-                            <h2 id="country">USA</h2>
-                            <p>Population: <span id="population"></span></p>
-                            <p>Region: <span id="region"></span></p>
-                            <p>Capital: <span id="capital"></span></p>
-                        </div>
-                    </div>
-                </div>
+      <main>
+        <div class="top-side">
+          <!-- Search -->
+          <div class="search-container">
+            <input
+              id="input"
+              type="text"
+              placeholder="Search for a country.."
+            />
+            <button id="search-btn">Search</button>
+          </div>
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <span>Filter by Region</span>
+            <div class="chevron">
+              <img src="./assets/icons/chevron.svg" alt="chevron" />
             </div>
-        </main>
+            <div class="dropdown-menu hidden">
+              <ul>
+                <li>
+                  <span data-region="Africa">Africa</span>
+                </li>
+                <li>
+                  <span data-region="Americas">Americas</span>
+                </li>
+                <li>
+                  <span data-region="Asia">Asia</span>
+                </li>
+                <li>
+                  <span data-region="Europe">Europe</span>
+                </li>
+                <li>
+                  <span data-region="Oceania">Oceania</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Card Container -->
+        <h1 id="loading" style="margin: 50px auto 0" class="hidden">
+          LOADING...
+        </h1>
+        <div class="card-container">
+          <!-- <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2>USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <img src="./assets/images/usa-flag.jpg" alt="flag" />
+            </div>
+            <div class="text-container">
+              <div class="info">
+                <h2 id="country">USA</h2>
+                <p>Population: <span id="population"></span></p>
+                <p>Region: <span id="region"></span></p>
+                <p>Capital: <span id="capital"></span></p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </main>
     </div>
-</body>
-
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
 </html>
