@@ -1,48 +1,7 @@
 @import "./colors";
 @import "./reset";
 
-body {
-  background: rgb(239, 238, 238);
-  font-family: $font-family_2;
-  position: relative;
-  color: $color_3;
-}
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-40px);
-}
-.inverted {
-  transform: rotate(180deg);
-}
-.container {
-  max-width: 1569px;
-  margin: 0 auto;
-}
-header {
-  position: sticky;
-  top: 0;
-  background-color: $background-color_1;
-  border-bottom: 1px solid #888;
-  z-index: 10000;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    .mode-container {
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      color: $color_2;
-      font-size: 20px;
-      gap: 10px;
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-}
+
 main {
   margin-top: 50px;
   margin-bottom: 200px;
@@ -58,8 +17,9 @@ main {
       border-radius: 10px;
       overflow: hidden;
       button {
+        color: var(--text-color);
         cursor: pointer;
-        background-color: $background-color_1;
+        background-color: var(--bg-color);
         width: 100px;
         border: 2px solid #88888870;
         border-left: none;
@@ -75,11 +35,16 @@ main {
         padding: 16px;
         font-size: 18px;
         border: 2px solid #88888870;
+        background: var(--bg-color-2);
+        color: var(--text-color);
+        &::placeholder{
+          color: var(--text-color);
+        }
       }
     }
     .dropdown {
       display: flex;
-      background: #fff;
+      background: var(--bg-color);
       padding: 20px;
       border-radius: 8px;
       gap: 30px;
@@ -94,7 +59,7 @@ main {
       }
       .dropdown-menu {
         position: absolute;
-        background: #fff;
+        background: var(--bg-color);
         padding: 16px 20px;
         width: 100%;
         border-radius: 8px;
@@ -118,7 +83,7 @@ main {
     .card {
       border-radius: 12px;
       overflow: hidden;
-      background: #fff;
+      background: var(--bg-color);
       box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.124);
       .info {
         padding: 30px 20px;

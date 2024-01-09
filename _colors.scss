@@ -1,4 +1,20 @@
 $color_1: currentColor;
 $color_2: #888;
 $color_3: #000;
-$background-color_1: #fff;
+$background-color1: #fff;
+$background-color2: rgb(239, 238, 238);
+$color_3dark: #fff;
+$background-color1_dark: #fff;
+$background-color2_dark: rgb(239, 238, 238);
+
+:root {
+  --text-color: #000;
+  --bg-color: #fff;
+  --bg-color-2: rgb(239, 238, 238);
+}
+
+.dark {
+  --text-color: #fff;
+  --bg-color: #000;
+  --bg-color-2: rgb(55, 55, 55);
+}

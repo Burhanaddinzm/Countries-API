@@ -1,4 +1,16 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+:root {
+  --text-color: #000;
+  --bg-color: #fff;
+  --bg-color-2: rgb(239, 238, 238);
+}
+
+.dark {
+  --text-color: #fff;
+  --bg-color: #000;
+  --bg-color-2: rgb(55, 55, 55);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,10 +43,10 @@ li {
 }
 
 body {
-  background: rgb(239, 238, 238);
+  background: var(--bg-color-2);
   font-family: "Poppins", sans-serif;
   position: relative;
-  color: #000;
+  color: var(--text-color);
 }
 
 .hidden {
@@ -55,7 +67,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: var(--bg-color);
   border-bottom: 1px solid #888;
   z-index: 10000;
 }
@@ -65,53 +77,7 @@ header .container {
   padding: 20px 0;
 }
 header .container .mode-container {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  color: #888;
-  font-size: 20px;
-  gap: 10px;
-}
-header .container .mode-container img {
-  width: 30px;
-  height: 30px;
-}
-
-body {
-  background: rgb(239, 238, 238);
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  color: #000;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-40px);
-}
-
-.inverted {
-  transform: rotate(180deg);
-}
-
-.container {
-  max-width: 1569px;
-  margin: 0 auto;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  border-bottom: 1px solid #888;
-  z-index: 10000;
-}
-header .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-header .container .mode-container {
+  cursor: pointer;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -142,8 +108,9 @@ main .top-side .search-container {
   overflow: hidden;
 }
 main .top-side .search-container button {
+  color: var(--text-color);
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--bg-color);
   width: 100px;
   border: 2px solid rgba(136, 136, 136, 0.4392156863);
   border-left: none;
@@ -159,10 +126,18 @@ main .top-side .search-container input {
   padding: 16px;
   font-size: 18px;
   border: 2px solid rgba(136, 136, 136, 0.4392156863);
+  background: var(--bg-color-2);
+  color: var(--text-color);
+}
+main .top-side .search-container input::-moz-placeholder {
+  color: var(--text-color);
+}
+main .top-side .search-container input::placeholder {
+  color: var(--text-color);
 }
 main .top-side .dropdown {
   display: flex;
-  background: #fff;
+  background: var(--bg-color);
   padding: 20px;
   border-radius: 8px;
   gap: 30px;
@@ -178,7 +153,7 @@ main .top-side .dropdown .chevron {
 }
 main .top-side .dropdown .dropdown-menu {
   position: absolute;
-  background: #fff;
+  background: var(--bg-color);
   padding: 16px 20px;
   width: 100%;
   border-radius: 8px;
@@ -201,7 +176,7 @@ main .card-container {
 main .card-container .card {
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: var(--bg-color);
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.124);
 }
 main .card-container .card .info {

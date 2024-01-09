@@ -28,10 +28,10 @@ li {
 }
 
 body {
-  background: rgb(239, 238, 238);
+  background: var(--bg-color-2);
   font-family: $font-family_2;
   position: relative;
-  color: $color_3;
+  color: var(--text-color);
 }
 .hidden {
   opacity: 0;
@@ -49,7 +49,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: $background-color_1;
+  background-color: var(--bg-color);
   border-bottom: 1px solid #888;
   z-index: 10000;
   .container {
@@ -57,6 +57,7 @@ header {
     justify-content: space-between;
     padding: 20px 0;
     .mode-container {
+      cursor: pointer;
       display: flex;
       align-items: center;
       font-weight: 700;

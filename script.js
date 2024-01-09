@@ -18,6 +18,10 @@ const dropdownMenu = document.querySelector(".dropdown-menu");
 const loadMsg = document.getElementById("loading");
 const cardContainer = document.querySelector(".card-container");
 
+//Dark Mode
+const darkMode = document.querySelector(".mode-container");
+const htmlEl = document.querySelector("html");
+
 let fetchedData = [];
 
 const fetchData = async () => {
@@ -108,6 +112,10 @@ searchBtn.addEventListener("click", () => {
       chevron.classList.remove("inverted");
     }
   });
+});
+
+darkMode.addEventListener("click", () => {
+  htmlEl.classList.toggle("dark");
 });
 
 fetchData();
