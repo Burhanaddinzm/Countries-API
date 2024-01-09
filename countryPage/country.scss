@@ -1,45 +1,5 @@
 @import "../colors";
 @import "../reset";
 
-body {
-  background: rgb(239, 238, 238);
-  font-family: $font-family_2;
-  position: relative;
-  color: $color_3;
-}
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-40px);
-}
-.inverted {
-  transform: rotate(180deg);
-}
-.container {
-  max-width: 1569px;
-  margin: 0 auto;
-}
-header {
-  position: sticky;
-  top: 0;
-  background-color: $background-color_1;
-  border-bottom: 1px solid #888;
-  z-index: 10000;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    .mode-container {
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      color: $color_2;
-      font-size: 20px;
-      gap: 10px;
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-}
+
+

@@ -77,6 +77,53 @@ header .container .mode-container img {
   height: 30px;
 }
 
+body {
+  background: rgb(239, 238, 238);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: #000;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-40px);
+}
+
+.inverted {
+  transform: rotate(180deg);
+}
+
+.container {
+  max-width: 1569px;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #888;
+  z-index: 10000;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+header .container .mode-container {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #888;
+  font-size: 20px;
+  gap: 10px;
+}
+header .container .mode-container img {
+  width: 30px;
+  height: 30px;
+}
+
 main {
   margin-top: 50px;
   margin-bottom: 200px;
