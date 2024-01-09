@@ -1,5 +1,29 @@
 @import "../colors";
 @import "../reset";
 
-
-
+.container {
+  #back-btn {
+    color: var(--text-color);
+    cursor: pointer;
+    background-color: var(--bg-color);
+    width: 150px;
+    border: 2px solid #88888870;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    margin-top: 80px;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    img {
+      filter: invert(var(--arrow-filter1)) sepia(var(--arrow-filter2))
+        saturate(var(--arrow-filter3)) hue-rotate(var(--arrow-filter4))
+        brightness(var(--arrow-filter5)) contrast(var(--arrow-filter6));
+    }
+    &:active {
+      filter: brightness(95%);
+    }
+  }
+}

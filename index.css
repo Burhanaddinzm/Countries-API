@@ -3,12 +3,24 @@
   --text-color: #000;
   --bg-color: #fff;
   --bg-color-2: rgb(239, 238, 238);
+  --arrow-filter1: 0;
+  --arrow-filter2: 0;
+  --arrow-filter3: 0;
+  --arrow-filter4: 0;
+  --arrow-filter5: 0;
+  --arrow-filter6: 0;
 }
 
 .dark {
   --text-color: #fff;
   --bg-color: #000;
   --bg-color-2: rgb(55, 55, 55);
+  --arrow-filter1: 98%;
+  --arrow-filter2: 100%;
+  --arrow-filter3: 0%;
+  --arrow-filter4: 7deg;
+  --arrow-filter5: 104%;
+  --arrow-filter6: 101%;
 }
 
 * {

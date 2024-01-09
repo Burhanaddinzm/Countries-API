@@ -1,7 +1,6 @@
 @import "./colors";
 @import "./reset";
 
-
 main {
   margin-top: 50px;
   margin-bottom: 200px;
@@ -37,7 +36,7 @@ main {
         border: 2px solid #88888870;
         background: var(--bg-color-2);
         color: var(--text-color);
-        &::placeholder{
+        &::placeholder {
           color: var(--text-color);
         }
       }

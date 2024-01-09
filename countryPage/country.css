@@ -3,12 +3,24 @@
   --text-color: #000;
   --bg-color: #fff;
   --bg-color-2: rgb(239, 238, 238);
+  --arrow-filter1: 0;
+  --arrow-filter2: 0;
+  --arrow-filter3: 0;
+  --arrow-filter4: 0;
+  --arrow-filter5: 0;
+  --arrow-filter6: 0;
 }
 
 .dark {
   --text-color: #fff;
   --bg-color: #000;
   --bg-color-2: rgb(55, 55, 55);
+  --arrow-filter1: 98%;
+  --arrow-filter2: 100%;
+  --arrow-filter3: 0%;
+  --arrow-filter4: 7deg;
+  --arrow-filter5: 104%;
+  --arrow-filter6: 101%;
 }
 
 * {
@@ -88,4 +100,27 @@ header .container .mode-container {
 header .container .mode-container img {
   width: 30px;
   height: 30px;
+}
+
+.container #back-btn {
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: var(--bg-color);
+  width: 150px;
+  border: 2px solid rgba(136, 136, 136, 0.4392156863);
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  margin-top: 80px;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.container #back-btn img {
+  filter: invert(var(--arrow-filter1)) sepia(var(--arrow-filter2)) saturate(var(--arrow-filter3)) hue-rotate(var(--arrow-filter4)) brightness(var(--arrow-filter5)) contrast(var(--arrow-filter6));
+}
+.container #back-btn:active {
+  filter: brightness(95%);
 }/*# sourceMappingURL=country.css.map */
