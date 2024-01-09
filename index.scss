@@ -80,6 +80,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 100px;
     .card {
+      height: 380px;
       border-radius: 12px;
       overflow: hidden;
       background: var(--bg-color);

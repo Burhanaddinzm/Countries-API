@@ -186,6 +186,7 @@ main .card-container {
   gap: 100px;
 }
 main .card-container .card {
+  height: 380px;
   border-radius: 12px;
   overflow: hidden;
   background: var(--bg-color);
