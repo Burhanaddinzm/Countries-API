@@ -21,8 +21,13 @@ const cardContainer = document.querySelector(".card-container");
 //Dark Mode
 const darkMode = document.querySelector(".mode-container");
 const htmlEl = document.querySelector("html");
+const fetchDark = JSON.parse(localStorage.getItem("isDark"));
 
 let fetchedData = [];
+let selectedCountry;
+
+if (fetchDark) htmlEl.classList.add("dark");
+else htmlEl.classList.remove("dark");
 
 const fetchData = async () => {
   const response = await fetch("https://restcountries.com/v3.1/all");
@@ -42,10 +47,11 @@ const displayData = (data) => {
     const population = element.population;
     const region = element.region;
     const { capital } = element;
-    const flag = element.flags.png;
+    const flag = element.flags.svg;
 
-    cardContainer.innerHTML += `   <div class="card">
+    cardContainer.innerHTML += `   
     <a href="./countryPage/country.html">
+    <div class="card" data-alt="${element.altSpellings[0]}">
       <div class="img-container">
       <img src="${flag}" alt="flag" />
       </div>
@@ -55,12 +61,13 @@ const displayData = (data) => {
       <p>Population: <span id="population">${population}</span></p>
       <p>Region: <span id="region">${region}</span></p>
       <p>Capital: <span id="capital">${
-        capital !== undefined ? capital : "Not defined"
+        capital !== undefined ? capital.flat()[0] : "Not defined"
       }</span></p>
         </div>
         </div>
+        </div>
         </a>
-        </div>`;
+        `;
   });
 };
 
@@ -95,6 +102,15 @@ searchBtn.addEventListener("click", () => {
   filterName(inputValue);
 });
 
+cardContainer.addEventListener("click", (e) => {
+  const cardElement = e.target.closest(".card");
+
+  if (cardElement) {
+    selectedCountry = cardElement.dataset.alt;
+    localStorage.setItem("selectedCountry", JSON.stringify(selectedCountry));
+  }
+});
+
 "click keypress".split(" ").forEach((event) => {
   window.addEventListener(event, (e) => {
     if (e.code === "Enter") {
@@ -116,6 +132,11 @@ searchBtn.addEventListener("click", () => {
 
 darkMode.addEventListener("click", () => {
   htmlEl.classList.toggle("dark");
+  if (htmlEl.classList.contains("dark"))
+    localStorage.setItem("isDark", JSON.stringify(true));
+  else {
+    localStorage.setItem("isDark", JSON.stringify(false));
+  }
 });
 
 fetchData();

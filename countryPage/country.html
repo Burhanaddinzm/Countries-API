@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,10 +22,12 @@
 
     <main>
       <div class="container">
-        <button id="back-btn">
-          <img src="../assets/icons/back-arrow.svg" alt="back arrow" />
-          Back
-        </button>
+        <a href="../index.html">
+          <button id="back-btn">
+            <img src="../assets/icons/back-arrow.svg" alt="back arrow" />
+            Back
+          </button>
+        </a>
         <!-- Info Container -->
         <div class="info-container">
           <div class="flag">
@@ -36,36 +38,26 @@
             <div class="main-info">
               <!-- Left -->
               <div class="left-side">
-                <h1>USA</h1>
+                <h1 id="common-name">USA</h1>
                 <div class="wrapper">
-                  <p>Native Name:</p>
-                  <span id="native-name">America</span>
-                  <p>Population:</p>
-                  <span id="population">1000000</span>
-                  <p>Region:</p>
-                  <span id="region">Americas</span>
-                  <p>Sub Region:</p>
-                  <span id="sub-region">North America</span>
-                  <p>Capital:</p>
-                  <span id="capital">Washington</span>
+                  <p>Native Name:<span id="native-name">America</span></p>
+                  <p>Population:<span id="population">1000000</span></p>
+                  <p>Region:<span id="region">Americas</span></p>
+                  <p>Sub Region:<span id="sub-region">North America</span></p>
+                  <p>Capital:<span id="capital">Washington</span></p>
                 </div>
               </div>
               <!-- Right -->
               <div class="right-side">
-                <p>Top Level Domain:</p>
-                <span id="domain">.com</span>
-                <p>Currencies:</p>
-                <span id="currency">USD</span>
-                <p>Languages:</p>
-                <span id="lang">English</span>
+                <p>Top Level Domain:<span id="domain">.com</span></p>
+                <p>Currencies:<span id="currency">USD</span></p>
+                <p>Languages:<span id="lang">English</span></p>
               </div>
             </div>
             <!-- Main info end -->
             <!-- Border -->
             <div class="border-info">
               <p>Border Countries:</p>
-              <span id="border">Canada</span>
-              <span id="border">Mexico</span>
             </div>
           </div>
         </div>
