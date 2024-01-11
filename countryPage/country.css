@@ -181,6 +181,8 @@ header .container .mode-container img {
 .container .info-container .info .main-info .right-side p {
   font-weight: 500;
   font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .container .info-container .info .main-info .right-side p span {
   font-weight: 300;
